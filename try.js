@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {  
-    // 获取所有的查看更多按钮  
+    // Get all the View More buttons 
     var showModalButtons = document.getElementsByClassName('show-modal');  
     var modal = document.getElementById('productModal');  
     var modalImage = document.getElementById('modalImage');  
@@ -7,44 +7,44 @@ document.addEventListener('DOMContentLoaded', function() {
     var modalProductDescription = document.getElementById('modalProductDescription');  
     var closeModal = document.getElementsByClassName('close')[0];  
     
-    // 为每个查看更多按钮添加点击事件监听器  
+    // Add a click event listener for each View More button  
     for (var i = 0; i < showModalButtons.length; i++) {  
       showModalButtons[i].addEventListener('click', function(e) {  
-        e.preventDefault(); // 阻止默认的点击事件  
+        e.preventDefault(); // Block default click events  
     
-        // 获取当前点击按钮的父元素（产品元素）的data-id  
+        // Obtain the data id of the parent element (product element) of the currently clicked button  
         var productId = this.parentNode.getAttribute('data-id');  
     
-        // 假设您有一个方法来获取产品的详细信息  
+        // Assuming you have a method to obtain detailed information about the product  
         var productData = getProductDataById(productId);  
     
-        // 在弹出框中显示产品的图片、名称和描述  
+        // Display product images, names, and descriptions in pop-up boxes  
         modalImage.src = productData.image;  
         modalProductName.textContent = productData.name;  
         modalProductDescription.textContent = productData.description;  
     
-        // 显示弹出框  
+        // Display pop-up box  
         modal.style.display = 'block';  
       });  
     }  
     
-    // 获取弹出框的关闭按钮，并为其添加点击事件监听器  
+    // Get the close button for the pop-up box and add a click event listener to it  
     closeModal.addEventListener('click', function() {  
-      // 隐藏弹出框  
+      // Hide Popup Boxes  
       modal.style.display = 'none';  
     });  
     
-    // 当用户点击任何地方以外弹出框时，也关闭它  
+    // When the user clicks on a pop-up box outside of anywhere, it also closes  
     window.addEventListener('click', function(event) {  
       if (event.target === modal) {  
         modal.style.display = 'none';  
       }  
     });  
     
-    // 假设的函数，用于根据产品ID获取产品数据 
+    // Assumed function for obtaining product data based on product ID 
     function getProductDataById(id) {  
-        // 假设这是您从服务器或本地存储中获取产品数据的方式  
-        // 这里是一个模拟的数组，用于演示  
+        // Assuming this is your way of obtaining product data from the server or local storage  
+        // This is a simulated array used to demonstrate  
         var productsData = [  
             { id: 1, image: 'D.png', name: 'Apple MacBook Pro', description: 'The Apple MacBook Pro is a powerful laptop suitable for professional users. It is equipped with the latest generation of processors and high-speed graphics processors, providing users with smooth multitasking capabilities and excellent graphics performance. Meanwhile, its exquisite design and excellent durability have made it a popular choice in the market.' },  
             { id: 2, image: 'E.png', name: 'Dell XPS 13', description: 'The Dell XPS 13 is a lightweight and portable laptop with excellent performance and long battery life. It adopts a high-resolution display screen, providing users with a clear and delicate visual experience. In addition, its excellent cooling system and silent performance also make it stand out among similar products.' },
@@ -58,18 +58,18 @@ document.addEventListener('DOMContentLoaded', function() {
             { id: 10, image: 'M.png', name: 'Razer BlackWidow Chroma V2', description: 'Razer BlackWidow Chroma V2 is a high-end mechanical keyboard suitable for gaming and office settings. It adopts high-quality mechanical buttons and RGB backlight design, providing users with an excellent typing experience and personalized visual effects. Meanwhile, its macro programming capabilities and comfortable button layout make it the preferred choice for professional users.' },   
         ];  
         
-        // 根据ID查找产品数据  
+        // Search product data based on ID  
         for (var i = 0; i < productsData.length; i++) {  
           if (productsData[i].id === id) {  
             return productsData[i];  
           }  
         }  
         
-        // 如果没有找到产品，返回null或抛出错误  
+        // If the product is not found, return null or throw an error
         return null;  
       }  
         
-      // 当用户按下Esc键时，也关闭模态框  
+      // When the user presses the Esc key, the modal box is also closed
       window.addEventListener('keydown', function(event) {  
         if (event.key === 'Escape' && modal.style.display === 'block') {  
           modal.style.display = 'none';  
