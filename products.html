@@ -8,10 +8,10 @@ body {
   background-color:lightgrey;
 }
 .left-image {  
-            float: left; /* 使图片浮动到左侧 */  
-            width: 150px; /* 自定义图片宽度 */  
-            height: auto; /* 保持图片的原始纵横比 */  
-            margin-right: 10px; /* 右侧添加一些间距 */  
+            float: left; /* Float the image to the left */  
+            width: 150px; /* Custom image width */  
+            height: auto; /* Maintain the original aspect ratio of the image */  
+            margin-right: 10px; /* Add some spacing on the right side */  
         }  
 .header {  
   background-color: lightgrey;  
@@ -36,17 +36,17 @@ body {
 }  
 .products {  
   display: flex;  
-  flex-wrap: wrap; /* 如果需要换行 */  
+  flex-wrap: wrap; /* If line breaks are needed */  
 }     
 .product {    
-  /* 移除 text-align: center; 样式，使得图片和按钮从左侧开始显示 */  
-  margin-bottom: 20px; /* 每个产品之间的间距 */  
+  /* Remove text align: center; Style to display images and buttons starting from the left side */  
+  margin-bottom: 20px; /* The spacing between each product */  
 }    
-.product-item { /* 新增容器类 */  
-  display: flex; /* 使用Flex布局，让图片和按钮在一行内显示 */  
-  flex-direction: column; /* 默认为column，但也可以显式指定 */  
-  align-items: flex-start; /* 使得内容从左侧开始对齐 */
-  margin-right: 10px; /* 可选：给每个项目添加右边距 */  
+.product-item { /* Add container class */  
+  display: flex; /* Use Flex layout to display images and buttons on one line */  
+  flex-direction: column; /* The default is column, but it can also be explicitly specified */  
+  align-items: flex-start; /* Align content from the left */
+  margin-right: 10px; /* Optional: Add right margin to each project */  
 }  
 .product-item:last-child {  
   margin-right: 0;  
@@ -54,11 +54,11 @@ body {
 .product-image {    
   width: 250px;  
   height: auto;  
-  display: block; /* 确保图片作为块级元素 */  
-  margin: 0; /* 移除margin，因为已经在.product-item中控制间距 */  
+  display: block; /* Ensure that the image is a block level element */  
+  margin: 0; /* Remove margin as spacing has already been controlled in the. product item */  
 }    
 .product-name {    
-  margin-top: 10px; /* 按钮与图片之间的间距 */  
+  margin-top: 10px; /* The spacing between buttons and images */  
   cursor: pointer;    
 }    
 .product-modal {    
@@ -133,7 +133,7 @@ footer a:hover {
   </div> 
     
 <div class="products">    
-  <!-- 第一个产品 -->  
+  <!-- First product -->  
   <div class="product-item">  
     <img src="D.png" alt="Product 1" class="product-image">  
     <button class="product-name" onclick="showModal('productModal1')">Apple MacBook Pro</button>  
@@ -174,17 +174,17 @@ footer a:hover {
     <img src="M.png" alt="Product 10" class="product-image">  
     <button class="product-name" onclick="showModal('productModal10')">Razer BlackWidow Chroma V2</button>  
   </div> 
-  <!-- 更多的产品可以像这样添加 -->  
+  <!-- More products can be added like this -->  
 </div>  
   
-<!-- 第一个产品的模态框 -->  
+<!-- Modal box for the first product -->  
 <div id="productModal1" class="product-modal">  
   <div class="product-modal-content">  
     <span class="close" onclick="closeModal('productModal1')">&times;</span>
     <img src="D.png" alt="Product 1" class="product-image">  
     <h2>Apple MacBook Pro</h2>  
     <p>The Apple MacBook Pro is a powerful laptop suitable for professional users. It is equipped with the latest generation of processors and high-speed graphics processors, providing users with smooth multitasking capabilities and excellent graphics performance. Meanwhile, its exquisite design and excellent durability have made it a popular choice in the market.</p>  
-    <!-- 在这里添加更多关于产品的详细信息 -->  
+    <!-- Add more detailed information about the product here -->  
   </div>  
 </div> 
 <div id="productModal2" class="product-modal">  
@@ -193,7 +193,7 @@ footer a:hover {
       <img src="E.png" alt="Product 2" class="product-image">  
       <h2>Dell XPS 13</h2>  
       <p>The Dell XPS 13 is a lightweight and portable laptop with excellent performance and long battery life. It adopts a high-resolution display screen, providing users with a clear and delicate visual experience. In addition, its excellent cooling system and silent performance also make it stand out among similar products.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div> 
   <div id="productModal3" class="product-modal">  
@@ -202,7 +202,7 @@ footer a:hover {
       <img src="F.png" alt="Product 3" class="product-image">  
       <h2>HP Pavilion Gaming Laptop</h2>  
       <p>HP Pavilion Gaming Laptop is a laptop designed specifically for gamers. It is equipped with high-performance processors and independent graphics cards, making it easy to handle various large-scale games. Meanwhile, its unique cooling system and comfortable keyboard design also provide players with a better gaming experience.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal4" class="product-modal">  
@@ -211,7 +211,7 @@ footer a:hover {
       <img src="G.png" alt="Product 4" class="product-image">  
       <h2>Lenovo ThinkPad X1 Carbon</h2>  
       <p>The Lenovo ThinkPad X1 Carbon is a business laptop known for its excellent durability and performance. It uses high-quality materials and exquisite craftsmanship to ensure the stability and durability of the product. Meanwhile, its efficient cooling system and long battery life make it the preferred choice for business people.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal5" class="product-modal">  
@@ -220,7 +220,7 @@ footer a:hover {
       <img src="H.png" alt="Product 5" class="product-image">  
       <h2>Samsung Galaxy Tab S7</h2>  
       <p>The Samsung Galaxy Tab S7 is a powerful tablet computer suitable for various scenarios. It is equipped with high-performance processors and large storage capacity, providing users with a smooth operating experience and rich storage space. Meanwhile, its exquisite display screen and excellent audio performance also bring users a better entertainment experience.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal6" class="product-modal">  
@@ -229,7 +229,7 @@ footer a:hover {
       <img src="I.png" alt="Product 6" class="product-image">  
       <h2>Microsoft Surface Pro 7</h2>  
       <p>Microsoft Surface Pro 7 is a two in one tablet that can be used as a tablet or connected to a keyboard to become a powerful laptop. It has a high-resolution display screen and excellent performance, which can meet various needs of users. Meanwhile, its exquisite design and long battery life also make it highly favored by users.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal7" class="product-modal">  
@@ -238,7 +238,7 @@ footer a:hover {
       <img src="J.png" alt="Product 7" class="product-image">  
       <h2>Logitech MX Master 3</h2>  
       <p>Logitech MX Master 3 is a high-end wireless mouse suitable for various computers and mobile devices. It adopts precise sensors and comfortable ergonomic design, providing users with an excellent operating experience. Meanwhile, its multi device connectivity and long battery life make it a choice for professional users.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal8" class="product-modal">  
@@ -247,7 +247,7 @@ footer a:hover {
       <img src="K.png" alt="Product 8" class="product-image">  
       <h2>SanDisk Ultra 3D NAND USB 3.1 Flash Drive</h2>  
       <p>SanDisk Ultra 3D NAND USB 3.1 Flash Drive is a high-performance flash drive with fast data transfer speed and a large amount of storage space. It adopts advanced 3D NAND technology to ensure the stability and durability of data. Meanwhile, its compact design and portability make it an ideal choice for users to store and transmit data.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal9" class="product-modal">  
@@ -256,7 +256,7 @@ footer a:hover {
       <img src="L.png" alt="Product 9" class="product-image">  
       <h2>ASUS ROG Strix Gaming Monitor</h2>  
       <p>ASUS ROG Strix Gaming Monitor is a high-performance display designed specifically for gamers. It adopts a panel with high resolution and fast response time, bringing users smooth and realistic game graphics. Meanwhile, its unique game mode and rich interface design also meet the various needs of gamers.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   <div id="productModal10" class="product-modal">  
@@ -265,18 +265,18 @@ footer a:hover {
       <img src="M.png" alt="Product 10" class="product-image">  
       <h2>Razer BlackWidow Chroma V2</h2>  
       <p>Razer BlackWidow Chroma V2 is a high-end mechanical keyboard suitable for gaming and office settings. It adopts high-quality mechanical buttons and RGB backlight design, providing users with an excellent typing experience and personalized visual effects. Meanwhile, its macro programming capabilities and comfortable button layout make it the preferred choice for professional users.</p>  
-      <!-- 在这里添加更多关于产品的详细信息 -->  
+      <!-- Add more detailed information about the product here -->  
     </div>  
   </div>
   
 <script>  
-// 显示模态框的函数  
+// Function for displaying modal boxes  
 function showModal(modalId) {  
   var modal = document.getElementById(modalId);  
   modal.style.display = "block";  
 }  
   
-// 关闭模态框的函数  
+// Function to close modal boxes  
 function closeModal(modalId) {  
   var modal = document.getElementById(modalId);  
   modal.style.display = "none";  
