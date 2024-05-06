@@ -1,0 +1,272 @@
+/* Add style here */  
+body {
+    background-color:lightgrey;
+  }
+  .left-image {  
+              float: left; /* Float the image to the left */  
+              width: 150px; /* Custom image width */  
+              height: auto; /* Maintain the original aspect ratio of the image */  
+              margin-right: 10px; /* Add some spacing on the right side */  
+          }  
+  .header {  
+    background-color: lightgrey;  
+    text-align: center;  
+    padding: 20px;  
+  }  
+  .topnav {  
+    overflow: hidden;  
+    background-color: #333;  
+  }  
+  .topnav a {  
+    float: left;  
+    display: block;  
+    color: white;  
+    text-align: center;  
+    padding: 14px 16px;  
+    text-decoration: none;  
+  }  
+  .topnav a:hover {  
+    background-color: lightgrey;  
+    color: white;  
+  }  
+  .content-container {  
+      display: flex;  
+      justify-content: space-between;  
+      align-items: flex-start;  
+      margin: 20px;  
+  }  
+    
+  .text-box {  
+      width: 45%;  
+  }  
+    
+  .image-box {  
+      width: 50%;  
+  }  
+    
+  .image-box img {  
+      width: 100%;  
+      height: auto;  
+  }
+  h2 {  
+      font-family: 'Arial', sans-serif;  
+      font-size: 2em;  
+      color: orange; /* Choose the appropriate color */  
+      text-align: center;  
+      margin-bottom: 20px; /* Add bottom spacing */  
+      background-color: lightblue; /* Add background color */  
+      padding: 10px 0; /* Add inner margin */  
+      border-bottom: 2px solid #ccc; /* Add bottom border */  
+  }  
+    
+  /* paragraph style */  
+  .welcome-paragraph {  
+      font-family: 'Verdana', sans-serif;  
+      font-size: 1em;  
+      line-height: 1; /* Adjust row height */  
+      color: blue; /* Choose the appropriate color */  
+      margin-bottom: 20px; /* Add bottom spacing */  
+      text-align: justify; /* Align Both Ends */  
+  }  
+  .blog-paragraph {  
+    font-family: 'Verdana', sans-serif;  
+    font-size: 0.5em;  
+    line-height: 1; /* Adjust row height */  
+    color: black; /* Choose the appropriate color */  
+    margin-bottom: 20px; /* Add bottom spacing */  
+    text-align: justify; /* Align Both Ends */  
+}  
+.about-paragraph {  
+    font-family: 'Verdana', sans-serif;  
+    font-size: 12px; /* Increase font size for easier reading */  
+    line-height: 1; /* Set the line height to 1.5 times the font size, which is usually easier to read */  
+    color: #333; /* Choose a slightly lighter black color to avoid being too eye-catching */  
+    margin-bottom: 5px; /* Increase bottom spacing to make paragraphs more distinct */  
+    text-align: justify; /* Align both ends, but be aware of potential trailing whitespace */  
+}
+  footer {  
+    background-color: #333; /* Footer background color */  
+    color: #fff; /* Text color */  
+    padding: 20px; /* Padding */  
+    text-align: center; /* Text alignment */  
+  }  
+    
+  footer a {  
+    color: #fff; /* Link color */  
+    text-decoration: none; /* Remove underline from links */  
+  }  
+    
+  footer a:hover {  
+    color: #ccc; /* Link color on hover */  
+    text-decoration: underline; /* Show underline on hover */  
+  }  
+  .container {  
+    display: flex; /* Use elastic box layout */  
+    justify-content: center; /* horizontally */  
+    align-items: center; /* Vertical center (if needed) */  
+    height: 100vh; /* Set the container height to the viewport height so that the image is vertically centered on the page */  
+}  
+
+.centered-image {  
+    width: 2000px; /* Custom image width */  
+    height: auto; /* Maintain the original aspect ratio of the image */  
+}  
+.products {  
+    display: flex;  
+    flex-wrap: wrap; /* If line breaks are needed */  
+  }     
+  .product {    
+    /* Remove text align: center; Style to display images and buttons starting from the left side */  
+    margin-bottom: 20px; /* The spacing between each product */  
+  }    
+  .product-item { /* Add container class */  
+    display: flex; /* Use Flex layout to display images and buttons on one line */  
+    flex-direction: column; /* The default is column, but it can also be explicitly specified */  
+    align-items: flex-start; /* Align content from the left */
+    margin-right: 10px; /* Optional: Add right margin to each project */  
+  }  
+  .product-item:last-child {  
+    margin-right: 0;  
+  }
+  .product-image {    
+    width: 250px;  
+    height: auto;  
+    display: block; /* Ensure that the image is a block level element */  
+    margin: 0; /* Remove margin as spacing has already been controlled in the. product item */  
+  }    
+  .product-name {    
+    margin-top: 10px; /* The spacing between buttons and images */  
+    cursor: pointer;    
+  }    
+  .product-modal {    
+    display: none; /* Hidden by default */  
+    position: fixed; /* Stay in place */  
+    z-index: 1; /* Sit on top */  
+    left: 0;  
+    top: 0;  
+    width: 100%; /* Full width */  
+    height: 100%; /* Full height */  
+    overflow: auto; /* Enable scroll if needed */  
+    background-color: rgba(0,0,0,0.4); /* Fallback color */  
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */  
+  }  
+    
+  .product-modal-content {  
+    background-color: lightgrey;  
+    margin: 15% auto; /* 15% from the top and centered */  
+    padding: 20px;  
+    border: 1px solid red;  
+    width: 50%; /* Could be more or less, depending on screen size */  
+  }  
+    
+  /* The Close Button */  
+  .close {  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
+  }  
+    
+  .close:hover,  
+  .close:focus {  
+    color: lightblue;  
+    text-decoration: none;  
+    cursor: pointer;  
+  }  
+  .photo-with-description {  
+    display: flex;  
+    align-items: flex-start; /* Vertical alignment */  
+    margin-top: 10px; /* Top outer margin */ 
+    overflow: auto; /* Prevent floating elements from overflowing the container */ 
+  }  
+  .left-photo {  
+    flex: 0 0 200px; /* Image fixed width */  
+    margin-right: 20px; /* The spacing between images and text */
+    float: left; /* Float to the left */  
+    width: 50%; /* Assuming you want half the width on both sides */  
+    margin-right: 10px; /* Right outer margin, used to separate images and descriptions */  
+  }  
+  .left-photo img {  
+    width: 100%; /* Image width 100%, filling container */  
+    height: auto; /* Maintain the original aspect ratio of the image */  
+  }  
+  .description {  
+    flex-grow: 1; /* Occupy remaining space */ 
+    float: left; /* Float to the left, side by side with the image */  
+    width: 40%; /* Describe the width occupied and consider some gaps */ 
+  }  
+  .description h2 {  
+    margin-top: 0; /* Remove the top outer margin of the title */  
+  }  
+    
+  /* Clear floating navigation bar */  
+  .clearfix::after {  
+    content: "";  
+    display: table;  
+    clear: both;  
+  }  
+  .support-flowchart-title {  
+    font-family: Arial, sans-serif;  
+    font-size: 24px;  
+    color: blue;  
+    text-align: left;  
+    margin-top: 20px;  
+    margin-bottom: 10px;  
+    line-height: 1.3;  
+    font-weight: bold;  
+  }
+  .service-flowchart-image {  
+    display: block; /* Ensure that images are displayed as block level elements */  
+    margin: 10px 0; /* The upper and lower outer margins can be adjusted as needed */  
+    max-width: 100%; /* The maximum width of the image is the container width, maintaining responsiveness */  
+    height: auto; /* Maintain the original aspect ratio of the image */  
+  }
+  .contact-info {  
+    float: right; /* Float to the right */  
+    width: 40%; /* The width occupied by contact information */  
+  }  
+    
+  .contact-info h3 {  
+    margin-top: 0; /* Remove the top outer margin and align it with the image and description */  
+  }  
+    
+  /* Clear float to ensure the container can contain floating elements */  
+  .photo-with-description:after {  
+    content: "";  
+    display: table;  
+    clear: both;  
+  }
+  .contact-form {  
+      margin-top: 20px; /* Maintain a certain distance from the contact information section above */  
+  }  
+    
+  .contact-form label {  
+      display: block;  
+      margin-bottom: 5px; /* The spacing between labels and input fields */  
+  }  
+    
+  .contact-form input[type="text"],  
+  .contact-form input[type="email"],  
+  .contact-form textarea {  
+      width: 100%; /* The input field occupies the entire width of the parent container */  
+      padding: 5px; /* padding  */  
+      box-sizing: border-box; /* Ensure width includes inner margins and borders */  
+      margin-bottom: 10px; /* The spacing between input fields */  
+  }  
+    
+  .contact-form textarea {  
+      height: 100px; /* Set the height of the message area */  
+  }  
+    
+  .contact-form input[type="submit"] {  
+      padding: 5px 10px; /* padding  */  
+      background-color: #4CAF50; /* Background color */  
+      color: white; /* Text color */  
+      border: none; /* no border */  
+      cursor: pointer; /* Change to hand icon when hovering over the mouse */  
+  }  
+    
+  .contact-form input[type="submit"]:hover {  
+      background-color: #45a049; /* Background color when hovering over the mouse */  
+  }
+  /* More Styles */  
